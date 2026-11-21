@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101018">
+  <title>Honeydew AI Video</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top"><a class="brand" href="#">honeydew<span>✳</span></a><span class="tag">EXPERIMENTAL MUSIC STUDIO</span></header>
+    <section class="hero">
+      <p class="eyebrow">MUSIC → VISUAL → MP4</p>
+      <h1>Turn an idea into<br><em>a moving sound.</em></h1>
+      <p class="intro">Опиши настроение и создай музыкальный эскиз с визуализацией. Экспортируй результат в MP4.</p>
+    </section>
+    <section class="panel">
+      <label for="prompt">ТВОЯ ИДЕЯ</label>
+      <textarea id="prompt" maxlength="240" placeholder="Например: спокойный электронный трек для ночной поездки..."></textarea>
+      <div class="controls">
+        <label class="field">НАСТРОЕНИЕ
+          <select id="mood"><option value="dream">Dreamy</option><option value="energetic">Energetic</option><option value="dark">Dark</option><option value="chill">Chill</option></select>
+        </label>
+        <label class="field">ДЛИТЕЛЬНОСТЬ
+          <select id="duration"><option value="15">15 секунд</option><option value="30">30 секунд</option><option value="45">45 секунд</option></select>
+        </label>
+      </div>
+      <button id="generate">Создать музыкальный эскиз <span>↗</span></button>
+      <p class="note">Сейчас это ранний процедурный прототип, не полноценная обученная музыкальная AI-модель.</p>
+    </section>
+    <section class="visual">
+      <div class="visual-head"><span>LIVE VISUALIZER</span><span id="status">ОЖИДАНИЕ</span></div>
+      <canvas id="viz" width="1200" height="520" aria-label="Музыкальная визуализация"></canvas>
+      <div class="player">
+        <button id="play" class="secondary" disabled>▶ Прослушать</button>
+        <button id="export" class="secondary" disabled>↓ Экспорт MP4</button>
+        <span id="timer">00:00</span>
+      </div>
+    </section>
+    <footer>HONEYDEW AI VIDEO <span>Independent experiment · Not part of Honeydew app</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
